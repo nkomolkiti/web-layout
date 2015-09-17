@@ -1,0 +1,56 @@
+html {
+	background:#A9F5F2;
+}
+
+
+.container {
+	width:98%; /*to set the edge >> not touching the edge*/
+	max-width:978px;
+	color:#DF01D7;
+	margin: 0 auto; /*this is so that it is in the middle*/
+	background:#ffffff;
+}
+
+
+/*//////////////navigation////////////////*/
+
+.nav {
+	padding-left: 0;
+	list-style: none; /*This is to get rid of the defualt UL*/
+}
+
+
+.nav > li { /*> means we specify that this style only applies to the direct LI child of .nav*/
+	display: inline-block;
+}
+
+/*.nav.center {text-align: center;}
+.nav.right {text-align: right;}*/
+
+.primary a {
+	display:block;
+	padding:1em; /*around 1 M padding around the thing*/
+	background:#BE81F7;
+	color:white;
+}
+
+.primary li + li {margin-left:10px;} /*have space between the lists equally*/
+
+
+/*//////////media query///////////*/
+
+@media (max-width: 760px) {
+/*as long as the width is smaller than 760px, the code after this will applies.*/
+
+	.primary > li {
+		display:block;} 
+	/*since I have written in line 23 .nav > li before, this menas it will overwrite the existed code onces the screen width is less than 760px*/
+
+	.primary > li + li { /*sibling selectors, select the list that comes after the first list*/
+		margin-top:10px;
+		margin-left:0;
+	}
+
+}
+
+/*////////////////////////////////*/
